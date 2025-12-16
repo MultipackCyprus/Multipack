@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multipack — Наши партнёры</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#e67e22;
+  --bg:#f0f4f8;
+  --text:#2d3436;
+  --shadow-light:10px 10px 22px rgba(209,217,230,.85);
+  --shadow-white:-10px -10px 22px #fff;
+}
+
+body{
+  margin:0;
+  font-family:'Nunito',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* ===== LANGUAGE ===== */
+[lang="en"]{display:none}
+body.lang-en [lang="ru"]{display:none}
+body.lang-en [lang="en"]{display:block}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(240,244,248,.95);
+  backdrop-filter:blur(12px);
+  z-index:100;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 20px;
+}
+
+.nav a{
+  text-decoration:none;
+  font-weight:900;
+  font-size:20px;
+  color:var(--text);
+}
+
+.lang-btn{
+  border:2px solid var(--primary);
+  background:none;
+  color:var(--primary);
+  padding:8px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:900;
+}
+
+/* ===== LAYOUT ===== */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:120px 20px 80px;
+}
+
+h1{
+  text-align:center;
+  font-size:3.6rem;
+  margin-bottom:20px;
+}
+
+.subtitle{
+  text-align:center;
+  font-size:1.4rem;
+  max-width:900px;
+  margin:0 auto 80px;
+}
+
+/* ===== COMPANY ===== */
+.company-card{
+  background:var(--bg);
+  border-radius:36px;
+  padding:40px;
+  box-shadow:var(--shadow-light),var(--shadow-white);
+  margin-bottom:100px;
+}
+
+.company-card h2{
+  font-size:2.6rem;
+}
+
+.company-card p{
+  font-size:1.25rem;
+  line-height:1.7;
+}
+
+/* ===== PARTNERS ===== */
+.partners{
+  display:grid;
+  gap:100px;
+}
+
+.partner{
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:60px;
+  align-items:center;
+  background:var(--bg);
+  padding:50px;
+  border-radius:40px;
+  box-shadow:var(--shadow-light),var(--shadow-white);
+}
+
+.partner img{
+  width:100%;
+  height:560px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:30px;
+  padding:20px;
+  box-shadow:0 18px 32px rgba(0,0,0,.18);
+}
+
+.partner h3{
+  font-size:2.6rem;
+  color:var(--primary);
+}
+
+.partner p{
+  font-size:1.3rem;
+  line-height:1.7;
+}
+
+/* ===== CATALOG ===== */
+.catalog{
+  text-align:center;
+  margin:120px auto 40px;
+}
+
+.catalog h2{
+  font-size:2.8rem;
+  margin-bottom:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:20px 50px;
+  background:var(--primary);
+  color:#fff;
+  border-radius:50px;
+  font-weight:900;
+  font-size:1.3rem;
+  text-decoration:none;
+}
+
+/* PDF buttons logic */
+.pdf-en{display:none}
+body.lang-en .pdf-ru{display:none}
+body.lang-en .pdf-en{display:inline-block}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:50px;
+  color:#888;
+  font-size:1.1rem;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  h1{font-size:2.6rem}
+  .partner{grid-template-columns:1fr}
+  .partner img{height:420px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html">← MULTIPACK</a>
+    <button class="lang-btn" onclick="toggleLang()">RU / EN</button>
+  </div>
+</header>
+
+<div class="container">
+
+<h1>
+  <span lang="ru">Наши партнёры</span>
+  <span lang="en">Our Partners</span>
+</h1>
+
+<p class="subtitle">
+  <span lang="ru">MULTIPACK сотрудничает с международным производителем кофе и напитков, предлагая профессиональные решения для HoReCa, офисов и ритейла.</span>
+  <span lang="en">MULTIPACK cooperates with an international coffee and beverage manufacturer, delivering professional solutions for HoReCa, offices and retail.</span>
+</p>
+
+<div class="company-card">
+  <h2>SATI Coffee & Food Solutions</h2>
+  <p lang="ru">SATI — международная компания, специализирующаяся на производстве кофе, какао и растворимых напитков для профессионального использования. Продукция ориентирована на кофейни, рестораны, вендинг и офисные решения.</p>
+  <p lang="en">SATI is an international company specializing in the production of coffee, cocoa and instant beverages for professional use. Products are designed for cafés, restaurants, vending and office solutions.</p>
+</div>
+
+<div class="partners">
+
+<div class="partner">
+  <img src="./Ыфеш.png">
+  <div>
+    <h3>SATI Coffee</h3>
+    <p lang="ru">Профессиональные кофейные бленды из отборной арабики и робусты. Обеспечивают стабильный вкус, насыщенный аромат и высокую экстракцию, идеально подходя для эспрессо и молочных напитков.</p>
+    <p lang="en">Professional coffee blends made from selected Arabica and Robusta. Deliver stable taste, rich aroma and high extraction, ideal for espresso and milk-based beverages.</p>
+  </div>
+</div>
+
+<div class="partner">
+  <img src="./ШОКОЛАДНЫЙ НАПТОК.png">
+  <div>
+    <h3>AREZOO Cocoa</h3>
+    <p lang="ru">Горячий шоколад быстрого приготовления с насыщенным вкусом какао и кремовой текстурой. Легко растворяется в молоке и воде, идеально подходит для кофеен и вендинговых автоматов.</p>
+    <p lang="en">Instant hot chocolate with rich cocoa flavor and creamy texture. It is easily soluble in milk and water, ideal for coffee shops and vending machines.</p>
+  </div>
+</div>
+
+<div class="partner">
+  <img src="./пробудись.png">
+  
+  <div>
+    <h3>VOLPE Coffee</h3>
+    <p lang="ru">Премиальная линейка кофе для ценителей. Включает бленды Morning, House и Semi Decaf, созданные для сбалансированного вкуса, насыщенного аромата и стабильного качества в каждой чашке.</p>
+    <p lang="en">Premium coffee line for true connoisseurs. Includes Morning, House and Semi Decaf blends, created for balanced taste, rich aroma and consistent quality in every cup.</p>
+  </div>
+</div>
+
+</div>
+
+<div class="catalog">
+  <h2>
+    <span lang="ru">Каталог партнёра</span>
+    <span lang="en">Partner Catalog</span>
+  </h2>
+
+  <a href="CafeSati-TR-Fiyat-Brosur-RU.pdf" target="_blank" class="btn pdf-ru">
+    Открыть каталог (PDF)
+  </a>
+
+  <a href="CafeSati-TR-Fiyat-Brosur-EN.pdf" target="_blank" class="btn pdf-en">
+    Open catalog (PDF)
+  </a>
+</div>
+
+</div>
+
+<footer>© 2025 MULTIPACK</footer>
+
+<script>
+function toggleLang(){
+  document.body.classList.toggle('lang-en');
+}
+</script>
+
+</body>
+</html>
